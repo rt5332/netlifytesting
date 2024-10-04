@@ -551,6 +551,7 @@ const overlay = document.querySelector(".overlay");
   socket.on("registerback", function(resgb){
     if(resgb == "BAD"){
       registration()
+      console.log("Recived and Registering!")
     }
   });
 
