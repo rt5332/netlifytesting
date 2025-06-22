@@ -6,7 +6,7 @@
   <script>
     
 
-
+<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     
     
 
@@ -492,12 +492,13 @@ const overlay = document.querySelector(".overlay");
     console.log("Hewo")
     console.log(res1)
     let caption = res1.caption_GPTS;
-    const synth = window.speechSynthesis;
-    const text = caption;
-    if (!synth.speaking && text) {
-      const utternace = new SpeechSynthesisUtterance(text);
-      synth.speak(utternace);
-    }
+    responsiveVoice.speak(caption);
+    // const synth = window.speechSynthesis;
+    // const text = caption;
+    // if (!synth.speaking && text) {
+    //   const utternace = new SpeechSynthesisUtterance(text);
+    //   synth.speak(utternace);
+    // }
 
   }
   function registration(){
