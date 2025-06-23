@@ -330,8 +330,8 @@ button {
   #camera--view,
   #camera--sensor,
   #camera--output {
-    transform: scaleX(-1);
-    filter: FlipH;
+/*     transform: scaleX(-1);
+    filter: FlipH; */
   }
 
   /* #camera--trigger {
@@ -495,13 +495,13 @@ const overlay = document.querySelector(".overlay");
     console.log("Hewo")
     console.log(res1)
     let caption = res1.caption_GPTS;
-    responsiveVoice.speak(caption);
-    // const synth = window.speechSynthesis;
-    // const text = caption;
-    // if (!synth.speaking && text) {
-    //   const utternace = new SpeechSynthesisUtterance(text);
-    //   synth.speak(utternace);
-    // }
+    // responsiveVoice.speak(caption);
+    const synth = window.speechSynthesis;
+    const text = caption;
+    if (!synth.speaking && text) {
+      const utternace = new SpeechSynthesisUtterance(text);
+      synth.speak(utternace);
+    }
 
   }
   function registration(){
